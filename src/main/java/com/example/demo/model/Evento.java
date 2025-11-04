@@ -20,7 +20,4 @@ public class Evento {
     private String descripcion;
     private LocalDateTime fecha;
     private String ubicacion;
-
-    @OneToMany(mappedBy = "evento", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Participante> participantes;
 }
