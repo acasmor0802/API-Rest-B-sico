@@ -28,8 +28,8 @@ public class OrganizadorController {
 
     // Buscar organizadores por nombre
     @GetMapping("/buscar")
-    public List<Organizador> buscarOrganizadoresPorEmail(@RequestParam String email) {
-        return organizadorRepository.findByEmailContainingIgnoreCase(email);
+    public List<Organizador> buscarOrganizadoresPorEmail(@RequestParam String nombre) {
+        return organizadorRepository.findByNombreContainingIgnoreCase(nombre);
     }
 
     // Obtener un organizador por ID
