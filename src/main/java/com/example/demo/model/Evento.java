@@ -21,10 +21,6 @@ public class Evento {
     private LocalDateTime fecha;
     private String ubicacion;
 
-    @ManyToOne
-    @JoinColumn(name = "organizador_id")
-    private Organizador organizador;
-
     @OneToMany(mappedBy = "evento", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Participante> participantes;
 }
